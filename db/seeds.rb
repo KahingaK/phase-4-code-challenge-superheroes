@@ -3,5 +3,13 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+#  heroes = Hero.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first)
+puts 'Seeding Heros....'
+10.times do
+    Hero.create(
+        name:Faker::Name.name,
+        super_name:Faker::Superhero.name
+    )
+end
